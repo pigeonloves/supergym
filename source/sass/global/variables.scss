@@ -1,0 +1,27 @@
+// Desktop First Adaptive Layout
+
+//Breakpoint
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1199px;
+$desktop: 1200px;
+
+$container: 1200px;
+$container-mobile-min: 320px;
+$container-desktop-min: 1000px;
+$container-max: 1450px;
+
+// Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Fonts
+$roboto-condensed: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+$bebas-neue: "Bebas Neue","Arial",sans-serif;
+
+// Colors
+$white: #ffffff;
+$hero-gradient-desktop: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+$hero-gradient-tablet: conic-gradient(from 139.4deg at 20.7% 35.74%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+$hero-gradient-mobile: conic-gradient(from 171.43deg at 35.31% 34.22%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
