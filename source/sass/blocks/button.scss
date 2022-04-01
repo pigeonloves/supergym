@@ -1,9 +1,10 @@
 .button {
   @include font($roboto-condensed, 12px, 14px, 700);
 
+  box-sizing: border-box;
   display: inline-block;
   min-height: 45px;
-  padding: 20px 56px;
+  padding: 20px 54px;
 
   text-transform: uppercase;
   text-align: center;
@@ -18,7 +19,10 @@
 
   &:hover,
   &:focus {
-    outline: 1px auto #000;
+    border-radius: 2px;
+    text-shadow: 0 0 10px $white;
+    box-shadow: 0 0 10px $white;
+    transition: all .1s;
   }
 
   &:active {

@@ -1,0 +1,298 @@
+.coaches__container {
+  // min-height: 516px;
+  padding-bottom: 120px;
+}
+
+.coaches__title {
+  @include font($bebas-neue, 49px, 49px, 700);
+
+  margin-bottom: 53px;
+  margin-left: 2px;
+
+  letter-spacing: 0.03em;
+  overflow-wrap: break-word;
+}
+
+.coaches__lists-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center
+}
+
+.coaches__list {
+  @include list-reset;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+  height: 294px;
+}
+
+.coaches__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  min-height: 294px;
+
+  margin-right: 40px;
+
+  // &:not(:nth-of-type(4n)) {
+  //   margin-right: 40px;
+  // }
+
+  pictupe {
+    position: absolute;
+
+    width: 260px;
+    height: 294px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 294px;
+
+    background-color: $coaches-hover;
+
+    opacity: 0;
+  }
+
+  &:hover::after,
+  &:hover .coaches__info > * {
+    opacity: 1;
+  }
+
+  &:hover .coaches__bottom-name {
+    opacity: 0;
+  }
+}
+
+.coaches__item-wrap {
+  position: absolute;
+  z-index: 2;
+
+  width: 260px;
+}
+
+.coaches__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 54px;
+
+  color: $white;
+}
+
+.coaches__info > * {
+  opacity: 0;
+}
+
+.coaches__bottom-name {
+  @include font($roboto-condensed, 18px, 22px, 700);
+
+  color: $white;
+  opacity: 1;
+}
+
+.coaches__info-name {
+  @include font($roboto-condensed, 18px, 22px, 700);
+}
+
+.coaches__sport {
+  @include font($roboto-condensed, 16px, 22px, 400);
+
+  margin-bottom: 33px;
+
+  color: $coaches-sport;
+}
+
+.coaches__achievement-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px 6px 71px;
+}
+
+.coaches__achievement-item {
+  @include font($roboto-condensed, 14px, 20px, 400);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+.coaches__achievement-item:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.coaches__button-list {
+  @include list-reset;
+
+  position: absolute;
+  top: 43%;
+  left: -58px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+}
+
+.coaches__button {
+  width: 18px;
+  height: 34px;
+  border: 0;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-image: url(../../img/icon-slider-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: $tablet-max) {
+  .coaches__container {
+    padding-top: 40px;
+    padding: 40px 70px 100px;
+  }
+
+  .coaches__title {
+    @include font($bebas-neue, 42px, 42px, 700);
+
+    margin-bottom: 40px;
+    margin-left: 2px;
+
+    text-align: center;
+  }
+
+  .coaches__list {
+    max-width: 596px;
+    margin-left: 30px;
+  }
+
+  .coaches__item {
+    width: 268px;
+    margin-right: 50px;
+
+    pictupe {
+      width: 268px;
+
+      img {
+        width: 268px;
+      }
+    }
+  }
+
+  .coaches__item:not(:nth-of-type(2n)) {
+    margin-right: 30px;
+  }
+
+  .coaches__button-list {
+    top: 43%;
+    left: 0;
+
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .coaches__container {
+    min-height: 444px;
+    padding-top: 35px;
+    padding-bottom: 70px;
+    padding: 32px 47px 70px;
+  }
+
+  .coaches__title {
+    @include font($bebas-neue, 32px, 32px, 700);
+
+    margin-bottom: 42px;
+    margin-left: 2px;
+
+    text-align: center;
+  }
+
+  .coaches__list {
+    max-width: 226px;
+    height: 274px;
+    margin-left: 0;
+  }
+
+  .coaches__item-wrap {
+    position: absolute;
+    z-index: 2;
+
+    width: 226px;
+  }
+
+  .coaches__item {
+    width: 226px;
+    min-height: 274px;
+
+    pictupe {
+      width: 226px;
+      height: 274px;
+
+      img {
+        width: 226px;
+        height: 274px;
+      }
+    }
+  }
+
+  .coaches__item:not(:nth-of-type(2n)) {
+    margin-right: 30px;
+  }
+
+  .coaches__info {
+    margin-top: 46px;
+  }
+
+  .coaches__achievement-list {
+    margin: 0 32px 6px 50px;
+  }
+
+  .coaches__button-list {
+    top: 45%;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .coaches__button {
+    width: 12px;
+    height: 30px;
+  }
+}

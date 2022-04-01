@@ -1,17 +1,26 @@
-.hero {
+.header {
   width: 100%;
   min-height: 658px;
 
   background: $hero-gradient-desktop;
 }
 
-.hero__top {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+.header__container {
+  padding-bottom: 50px;
 }
 
-.hero__tel {
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  *:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.header__tel {
   @include font($bebas-neue, 26px, 26px, 700);
 
   color: $white;
@@ -19,37 +28,41 @@
   letter-spacing: 0.03em;
 }
 
-.hero__main {
+.header__main {
   display: flex;
   justify-content: space-between;
   margin-top: -4px;
 }
 
-.hero__content {
+.header__content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 400px;
+  width: 396px;
 }
 
-.hero__content-city {
+.header__content-city {
   @include font($bebas-neue, 49px, 50px, 400);
 
+  width: 396px;
   margin: 0;
   margin-top: 116px;
+
   color: $white;
+  text-align: end;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
-.hero__content-wrap {
+.header__content-wrap {
   position: relative;
 
-  margin-bottom: 56px;
+  margin-bottom: 84px;
 }
 
-.hero__content-title {
-  @include font($bebas-neue, 109px, 109px, 700);
+.header__content-title {
+  @include font($bebas-neue, 110px, 109px, 700);
 
   width: 300px;
   margin: 0;
@@ -59,93 +72,104 @@
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  overflow-wrap: break-word;
 }
 
-.hero__content-text {
+.header__content-text {
   @include font($roboto-condensed, 14px, 21px, 400);
-
-  position: absolute;
-  bottom: 27px;
-  left: -80px;
 
   width: 115px;
   margin: 0;
+  margin-top: -90px;
+  margin-left: -80px;
+
   color: $white;
   text-align: right;
 }
 
-.hero__socials {
-  display: flex;
-  flex-direction: column-reverse;
+.header__image {
+  width: 500px;
+  height: 556px;
 
-  margin-left: 124px;
-  margin-right: -5px;
+  background-color: $superhero;
+
+  img {
+    display: block;
+  }
 }
 
-.hero__socials-list {
+.header__socials {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 126px;
+}
+
+.header__socials-list {
   @include list-reset;
 
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 44px;
 }
 
-.hero__socials-item:not(:last-of-type) {
+.header__socials-item:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
 @media (max-width: $tablet-max) {
-  .hero {
+  .header {
     min-height: 554px;
 
     background: $hero-gradient-tablet;
   }
 
-  .hero__top {
+  .header__top {
     margin-top: 40px;
     margin-bottom: 18px;
   }
 
-  .hero__logo-icon {
+  .header__logo-icon {
     width: 82px;
-    height: 17px;
+    height: 18px;
   }
 
-  .hero__tel {
+  .header__tel {
     @include font($bebas-neue, 24px, 24px, 700);
 
     letter-spacing: 0.02em;
   }
 
-  .hero__image {
+  .header__image {
     width: 324px;
-    // height: 100%;
+    height: 390px;
+
+    background-color: $superhero;
   }
 
-  .hero__main {
+  .header__main {
     margin-top: 0;
   }
 
-  .hero__content {
+  .header__content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 325px;
   }
 
-  .hero__content-city {
+  .header__content-city {
     @include font($bebas-neue, 34px, 34px, 400);
 
     margin-top: 54px;
   }
 
-  .hero__content-wrap {
+  .header__content-wrap {
     position: relative;
 
-    margin-bottom: 40px;
+    margin-bottom: 57px;
   }
 
-  .hero__content-title {
+  .header__content-title {
     @include font($bebas-neue, 86px, 86px, 700);
 
     width: 235px;
@@ -153,76 +177,74 @@
 
   }
 
-  .hero__content-text {
+  .header__content-text {
     @include font($roboto-condensed, 14px, 21px, 400);
 
-    bottom: 16px;
-    left: -92px;
-
     width: 115px;
-    margin: 0;
+    margin-top: -80px;
+    margin-left: -92px;
+
     color: $white;
     text-align: right;
   }
 
-  .hero__socials {
+  .header__socials {
     display: none;
   }
 }
 
 @media (max-width: $mobile-max) {
-  .hero {
+  .header {
     min-height: 491px;
 
     background: $hero-gradient-mobile;
   }
 
-  .hero__top {
+  .header__top {
     margin-top: 20px;
     margin-bottom: 18px;
   }
 
-  .hero__logo-icon {
+  .header__logo-icon {
     width: 68px;
     height: 15px;
   }
 
-  .hero__tel {
+  .header__tel {
     @include font($bebas-neue, 20px, 20px, 700);
   }
 
-  .hero__image {
+  .header__image {
     display: none;
   }
 
-  .hero__main {
+  .header__main {
     justify-content: center;
   }
 
-  .hero__content {
+  .header__content {
     width: 290px;
   }
 
-  .hero__content-city {
+  .header__content-city {
     @include font($bebas-neue, 28px, 28px, 400);
 
     margin-top: 54px;
   }
 
-  .hero__content-wrap {
-    margin-bottom: 42px;
+  .header__content-wrap {
+    margin-bottom: 54px;
   }
 
-  .hero__content-title {
+  .header__content-title {
     @include font($bebas-neue, 78px, 78px, 700);
 
     width: 214px;
     margin-top: 12px;
-
   }
 
-  .hero__content-text {
-    bottom: 12px;
-    left: -80px;
+  .header__content-text {
+    margin-top: -75px;
+    margin-left: -80px;
   }
 }
