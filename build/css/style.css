@@ -1749,37 +1749,6 @@ a {
 .coaches__achievement-item:not(:last-of-type) {
   margin-bottom: 15px; }
 
-.coaches__button-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 43%;
-  left: -58px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 110%; }
-
-.coaches__button {
-  width: 18px;
-  height: 34px;
-  border: 0;
-  background-color: transparent;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  background-image: url(../../img/icon-slider-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
-  .coaches__button--next {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-
 @media (max-width: 1199px) {
   .coaches__container {
     padding-top: 40px;
@@ -2579,36 +2548,6 @@ a {
   font-weight: 400;
   max-width: 328px; }
 
-.reviews__button-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 44%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 674px; }
-
-.reviews__button {
-  width: 18px;
-  height: 34px;
-  border: 0;
-  background-color: transparent;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  background-image: url(../../img/icon-slider-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
-  .reviews__button--next {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-
 @media (max-width: 1199px) {
   .reviews {
     min-height: 465px;
@@ -3219,11 +3158,11 @@ a {
 
 .coaches__list .slick-arrow.slick-prev {
   left: -57px;
-  background: url("../../img/icon-slider-arrow.svg") 0 0/100% no-repeat; }
+  background: url("../img/icon-slider-arrow.svg") 0 0/100% no-repeat; }
 
 .coaches__list .slick-arrow.slick-next {
   right: -60px;
-  background: url("../../img/icon-slider-arrow.svg") 0 0/100% no-repeat;
+  background: url("../img/icon-slider-arrow.svg") 0 0/100% no-repeat;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
@@ -3267,11 +3206,11 @@ a {
 .reviews__list .slick-arrow.slick-prev {
   left: -57px;
   margin-top: -18px;
-  background: url("../../img/icon-slider-arrow.svg") 0 0/100% no-repeat; }
+  background: url("../img/icon-slider-arrow.svg") 0 0/100% no-repeat; }
 
 .reviews__list .slick-arrow.slick-next {
   right: -57px;
-  background: url("../../img/icon-slider-arrow.svg") 0 0/100% no-repeat;
+  background: url("../img/icon-slider-arrow.svg") 0 0/100% no-repeat;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
