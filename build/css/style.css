@@ -343,27 +343,6 @@ template {
   font-weight: 300;
   font-style: normal; }
 
-@font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: local("Roboto Condensed"), url("../fonts/roboto-condensed-light.woff2") format("woff2"), url("../fonts/roboto-condensed-light.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: local("Roboto Condensed"), url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: local("Roboto Condensed"), url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff"); }
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -1761,7 +1740,9 @@ a {
   margin-right: 40px;
   background-color: #aeb7c8;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin; }
   .coaches__item pictupe {
     position: absolute;
     height: 294px; }

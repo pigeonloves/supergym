@@ -1,8 +1,6 @@
 window.addEventListener('load', () => {
   const tubs = document.querySelectorAll('.sub__month-link');
   const lists = document.querySelectorAll('.sub__list');
-  console.log(lists);
-
 
   function changeLists(tubs, lists, jsClass, cssClass) {
     tubs.forEach((tub, i) => {
