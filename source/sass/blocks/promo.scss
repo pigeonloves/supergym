@@ -147,7 +147,7 @@
   .promo__title {
     @include font($bebas-neue, 52px, 52px, 700);
 
-    max-width: 120px;
+    max-width: 132px;
 
   }
 
@@ -238,7 +238,7 @@
   .promo__container {
     flex-direction: column;
     padding-top: 70px;
-    padding-bottom: 35px;
+    padding-bottom: 36px;
   }
 
   .promo__text-wrap {

@@ -237,14 +237,22 @@
   }
 
   .header__content-title {
-    @include font($bebas-neue, 78px, 78px, 700);
+    @include font('Bebas Neue', 78px, 78px, 700);
 
-    width: 214px;
+    // font-family: "Bebas Neue","Arial",sans-serif;
+    // font-size: 78px;
+    // line-height: 78px;
+    // font-weight: 700;
+    // letter-spacing: 0.03em;
+
+    // выравниваем текст на айфоне
+    // width: 350px;
+    // width: 214px;
     margin-top: 12px;
   }
 
   .header__content-text {
     margin-top: -75px;
-    margin-left: -80px;
+    margin-left: -58px;
   }
 }

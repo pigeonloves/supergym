@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Фитнес центр Supergym в Омске">
     <title>Supergym | Фитнес центр</title>
-    <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <!-- <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/bebas-neue-bold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin=""> -->
+
+    <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BebasNeue-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Condensed.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+
     <link rel="icon" href="img/favicon.svg">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -137,41 +144,83 @@
     </section>
 
     <section class="sub">
-      <div class="container sub__main-container">
-        <a href="#" id="sub" aria-label="якорь"></a>
+      <div class="container sub__main-container sub__wrapper">
+        <a href="#" id="sub" aria-label="якорь" tabindex="-1"></a>
         <h2 class="sub__title">Абонементы</h2>
         <div class="sub__container">
           <ul class="sub__month-list">
-            <li class="sub__month-item sub__month-item--active" tabindex="4">1 месяц</li>
-            <li class="sub__month-item" tabindex="5">6 месяцев</li>
-            <li class="sub__month-item" tabindex="6">12 месяцев</li>
-          </ul>
-          <ul class="sub__day-list">
-            <li class="sub__day-item">
-              <p class="sub__item-title">С тренером</p>
-              <p class="sub__item-info">12 занятий</p>
-              <p class="sub__item-background">5000</p>
-              <p class="sub__item-price">5000 <span>₽</span></p>
-              <a href="#" class="sub__link-subscription">купить абонемент</a>
+            <li class="sub__month-item">
+              <a class="sub__month-link sub__month-link--active" href="#" aria-label="Абонементы на 1 месяц">1 месяц</a>
             </li>
-            <li class="sub__day-item sub__day-item--active">
-              <p class="sub__item-title">Дневной</p>
-              <p class="sub__item-info">с 8:00 до 17:00</p>
-              <p class="sub__item-background">1700</p>
-              <p class="sub__item-price">1700 <span>₽</span></p>
-              <a href="#" class="sub__link-subscription sub__link-subscription--active">купить абонемент</a>
+            <li class="sub__month-item">
+              <a class="sub__month-link sub__month-link--half-year" href="#" aria-label="Абонементы на 6 месяцев">6 месяцев</a>
             </li>
-            <li class="sub__day-item">
-              <p class="sub__item-title">Полный день</p>
-              <p class="sub__item-info">с 8:00 до 22:00</p>
-              <p class="sub__item-background">2700</p>
-              <p class="sub__item-price">2700 <span>₽</span></p>
-              <a href="#" class="sub__link-subscription">купить абонемент</a>
+            <li class="sub__month-item">
+              <a class="sub__month-link sub__month-link--year" href="#" aria-label="Абонементы на 12 месяцев">12 месяцев</a>
             </li>
           </ul>
 
+          <ul class="sub__list sub__list--month">
+            <li class="sub__item">
+              <p class="sub__subtitle">С тренером</p>
+              <p class="sub__time">12 занятий</p>
+              <p class="sub__price" data-price="5000">5000<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Дневной</p>
+              <p class="sub__time">с 8:00 до 17:00</p>
+              <p class="sub__price" data-price="1700">1700<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Полный день</p>
+              <p class="sub__time">с 8:00 до 22:00</p>
+              <p class="sub__price" data-price="2700">2700<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="sub__list sub__list--half-year sub__list-hidden">
+            <li class="sub__item">
+              <p class="sub__subtitle">С тренером</p>
+              <p class="sub__time">12 занятий</p>
+              <p class="sub__price" data-price="25000">25000<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Дневной</p>
+              <p class="sub__time">с 8:00 до 17:00</p>
+              <p class="sub__price" data-price="8500">8500<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Полный день</p>
+              <p class="sub__time">с 8:00 до 22:00</p>
+              <p class="sub__price" data-price="13500">13500<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="sub__list sub__list--year sub__list-hidden">
+            <li class="sub__item">
+              <p class="sub__subtitle">С тренером</p>
+              <p class="sub__time">12 занятий</p>
+              <p class="sub__price" data-price="40000">40000<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Дневной</p>
+              <p class="sub__time">с 8:00 до 17:00</p>
+              <p class="sub__price" data-price="13600">13600<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+            <li class="sub__item">
+              <p class="sub__subtitle">Полный день</p>
+              <p class="sub__time">с 8:00 до 22:00</p>
+              <p class="sub__price" data-price="20200">20200<span class="sub__ruble">₽</span></p>
+              <a class="sub__link btn btn--gradient" href="#">Купить абонемент</a>
+            </li>
+          </ul>
         </div>
-
       </div>
       <picture>
         <source type="image/webp" media="(max-width: 1199px)" srcset="img/subscription-bg-tablet@1x.webp 1x, img/subscription-bg-tablet@2x.webp 2x">
@@ -232,8 +281,9 @@
     </section>
 
     <section class="coaches">
+      <h2 class="coaches__title">Тренеры</h2>
       <div class="container coaches__container">
-        <h2 class="coaches__title">Тренеры</h2>
+
         <div class="coaches__lists-container">
           <ul class="coaches__list">
             <li class="coaches__item">
@@ -408,8 +458,9 @@
               </picture>
             </li>
           </ul>
-
+          <div class="coaches__arrows"></div>
         </div>
+
       </div>
     </section>
 
@@ -420,7 +471,13 @@
         <div class="advantages__top">
           <div class="advantages__space">
             <div class="advantages__number advantages__number--space">
-              <p class="advantages__number-value">900</p>
+              <picture>
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/900-small@1x.webp 1x, img/900-small@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/900-big@1x.webp 1x, img/900-big@2x.webp 2x">
+
+                <source media="(min-width: 320px)" srcset="img/900-small@1x.jpg 1x, img/900-small@2x.jpg 2x">
+                <img class="advantages__number-value" src="img/900-big@1x.png" srcset="img/900-big@2x.jpg" width="102" height="53" alt="900">
+              </picture>
               <p class="advantages__number-metrics">Кв/м</p>
             </div>
             <div class="advantages__desc advantages__desc--space">
@@ -430,7 +487,13 @@
           </div>
           <div class="advantages__parking">
             <div class="advantages__number advantages__number--parking">
-              <p class="advantages__number-value">70</p>
+              <picture>
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/70-small@1x.webp 1x, img/70-small@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/70-big@1x.webp 1x, img/70-big@2x.webp 2x">
+
+                <source media="(min-width: 320px)" srcset="img/70-small@1x.jpg 1x, img/70-small@2x.jpg 2x">
+                <img class="advantages__number-value" src="img/70-big@1x.png" srcset="img/70-big@2x.jpg" width="102" height="53" alt="900">
+              </picture>
               <p class="advantages__number-metrics">Машин</p>
             </div>
             <div class="advantages__desc advantages__desc--parking">
@@ -446,7 +509,13 @@
         <div class="advantages__bottom">
           <div class="advantages__comfort">
             <div class="advantages__number advantages__number--comfort">
-              <p class="advantages__number-value">350</p>
+              <picture>
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/350-small@1x.webp 1x, img/350-small@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/350-big@1x.webp 1x, img/350-big@2x.webp 2x">
+
+                <source media="(min-width: 320px)" srcset="img/350-small@1x.jpg 1x, img/350-small@2x.jpg 2x">
+                <img class="advantages__number-value" src="img/350-big@1x.png" srcset="img/350-big@2x.jpg" width="102" height="53" alt="900">
+              </picture>
               <p class="advantages__number-metrics">Мест</p>
             </div>
             <div class="advantages__desc advantages__desc--comfort">
@@ -456,7 +525,13 @@
           </div>
           <div class="advantages__experience">
             <div class="advantages__number advantages__number--experience">
-              <p class="advantages__number-value">5+</p>
+              <picture>
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/5-small@1x.webp 1x, img/5-small@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/5-big@1x.webp 1x, img/5-big@2x.webp 2x">
+
+                <source media="(min-width: 320px)" srcset="img/5-small@1x.jpg 1x, img/5-small@2x.jpg 2x">
+                <img class="advantages__number-value" src="img/5-big@1x.png" srcset="img/5-big@2x.jpg" width="102" height="53" alt="900">
+              </picture>
               <p class="advantages__number-metrics">Лет</p>
             </div>
             <div class="advantages__desc advantages__desc--experience">

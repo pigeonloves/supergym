@@ -3702,6 +3702,7 @@ $('.coaches__list').slick({
     adaptiveHeight: false,
     slidesToScroll: 4,
     variableWidth: true,
+    appendArrows: $('.coaches__arrows'),
     responsive: [
         {
           breakpoint: 1199,
@@ -3736,6 +3737,29 @@ $('.reviews__list').slick({
           },
         }
       ]
+});
+window.addEventListener('load', () => {
+    const tubs = document.querySelectorAll('.sub__month-link');
+    const lists = document.querySelectorAll('.sub__list');
+    console.log(lists);
+    function changeLists(tubs, lists, jsClass, cssClass) {
+        tubs.forEach((tub, i) => {
+            tub.addEventListener('click', evt => {
+                evt.preventDefault();
+                tubs.forEach(el => {
+                    el.classList.remove(cssClass);
+                });
+                tub.classList.add(cssClass);
+                lists.forEach(list => {
+                    list.classList.add(jsClass);
+                });
+                lists[i].classList.remove(jsClass);
+            });
+        });
+    }
+    if (tubs) {
+        changeLists(tubs, lists, 'sub__list-hidden', 'sub__month-link--active');
+    }
 });
 // Валидация номера телефона
 (function () {

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 115px 80px;
+  padding: 117px 80px;
 }
 
 .advantages__title {
@@ -60,6 +60,12 @@
     margin-left: 26px;
     padding-bottom: 20px;
 
+    .advantages__number-value {
+      width: 104px;
+      height: 53px;
+      margin: 9px 0 6px 2px;
+    }
+
     .advantages__number-metrics {
       overflow-wrap: break-word;
     }
@@ -67,11 +73,23 @@
 
   &--parking {
     width: 72px;
+
+    .advantages__number-value {
+      width: 67px;
+      height: 53px;
+      margin: 9px 0 6px 2px;
+    }
   }
 
   &--comfort {
     width: 107px;
     margin-left: 20px;
+
+    .advantages__number-value {
+      width: 104px;
+      height: 53px;
+      margin: 9px 0 6px;
+    }
 
     .advantages__number-metrics {
       overflow-wrap: break-word;
@@ -81,21 +99,38 @@
   &--experience {
     width: 70px;
     margin-right: 33px;
+
+    .advantages__number-value {
+      width: 66px;
+      height: 53px;
+      margin: 9px 0 6px 3px;
+    }
   }
 }
 
-.advantages__number-value {
-  @include font($roboto-condensed, 71px, 71px, 700);
+// .advantages__number-value {
+//   @include font($roboto-condensed, 71px, 71px, 700);
 
-  display: table;
+//   display: table;
 
-  color: $number-blue;
-  text-transform: uppercase;
+//   color: $number-blue;
+//   text-transform: uppercase;
 
-  background: linear-gradient(127.61deg, $number-red 0%, $number-blue 45.58%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+//   background: linear-gradient(127.61deg, $number-red 0%, $number-blue 45.58%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   overflow-wrap: break-word;
+// }
+
+.advantages__number-value-img {
+  // width: 108px;
+  // height: 49px;
+  width: 104px;
+  height: 53px;
+  margin-top: 9px;
+  margin-left: 2px;
+  margin-bottom: 6px;
 }
 
 .advantages__number-metrics {
@@ -128,6 +163,8 @@
 
 .advantages__desc-title {
   @include font($roboto-condensed, 22px, 40px, 700);
+
+  margin-bottom: 4px;
 
   color: $black-blue;
   overflow-wrap: break-word;
@@ -220,6 +257,11 @@
       margin-left: 0;
       padding-bottom: 20px;
 
+      .advantages__number-value {
+        width: 84px;
+        height: 40px;
+      }
+
       .advantages__number-metrics {
         overflow-wrap: break-word;
       }
@@ -227,11 +269,24 @@
 
     &--parking {
       width: 72px;
+
+      .advantages__number-value {
+        width: 55px;
+        height: 43px;
+        margin: 7px 0 6px;
+      }
     }
 
     &--comfort {
       width: 107px;
       margin-left: 0;
+
+      .advantages__number-value {
+        width: 84px;
+        height: 42px;
+        margin-top: 6px;
+        margin-left: 2px;
+      }
 
       .advantages__number-metrics {
         overflow-wrap: break-word;
@@ -241,11 +296,26 @@
     &--experience {
       width: 70px;
       margin-right: 0;
+
+      .advantages__number-value {
+        width: 52px;
+        height: 42px;
+        margin: 6px 0 6px 2px;
+      }
     }
   }
 
-  .advantages__number-value {
-    @include font($roboto-condensed, 58px, 58px, 700);
+  // .advantages__number-value {
+  //   @include font($roboto-condensed, 58px, 58px, 700);
+  // }
+
+  .advantages__number-value-img {
+    // width: 108px;
+    // height: 49px;
+    width: 83px;
+    height: 40px;
+    margin-top: 9px;
+    margin-left: 3px;
   }
 
   .advantages__number-metrics {
@@ -274,6 +344,8 @@
 
   .advantages__desc-title {
     @include font($roboto-condensed, 20px, 30px, 700);
+
+    margin-bottom: 0;
 
     color: $black-blue;
     overflow-wrap: break-word;
@@ -312,8 +384,8 @@
 
 @media (max-width: $mobile-max) {
   .advantages__container {
-    padding: 70px 15px;
-    padding-bottom: 20px;
+    padding: 69px 15px 22px;
+    // padding-bottom: ;
   }
 
   .advantages__title {
@@ -327,7 +399,7 @@
   .advantages__top,
   .advantages__bottom {
     flex-direction: column;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
 
   .advantages__space,

@@ -8,6 +8,7 @@ $('.coaches__list').slick({
   adaptiveHeight: false,
   slidesToScroll: 4,
   variableWidth: true,
+  appendArrows: $('.coaches__arrows'),
   responsive: [
     {
       breakpoint: 1199,

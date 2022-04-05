@@ -48,6 +48,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  min-width: 110px;
   margin-top: 6px;
   margin-left: 80px;
 }
@@ -88,6 +89,7 @@
   }
 
   .footer__socials-list {
+    min-width: 100px;
     margin-left: 32px;
   }
 
@@ -145,6 +147,7 @@
   }
 
   .footer__socials-list {
+    min-width: 143px;
     margin-left: 0;
   }
 
